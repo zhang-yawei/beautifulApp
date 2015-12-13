@@ -62,10 +62,14 @@ class XMFindAppModel: NSObject {
         self.author_id = dict["author_id"] as? String
         self.author_gender = dict["author_gender"] as? String
         self.author_career = dict["author_career"] as? String
-        self.show_times = "\(dict["show_times"]!)"
-        self.author_flowers = "\(dict["author_flowers"]!)"
-        self.comment_times = "\(dict["comment_times"]!)"
-        self.id = "\(dict["id"])"
+        let showTimes = dict["show_times"];
+        self.show_times = "\(showTimes)!";
+        let anthorFlower = dict["author_flowers"];
+        self.author_flowers = "\(anthorFlower)!)"
+        let commentTimes = dict["comment_times"];
+        self.comment_times = "\(commentTimes)";
+        let idd = dict["id"];
+        self.id = "\(idd)"
         self.icon_image = dict["icon_image"] as? String
         self.appDescription = dict["description"] as? String
         self.created_at = dict["created_at"] as? String
@@ -74,8 +78,10 @@ class XMFindAppModel: NSObject {
         self.author_bgcolor = dict["author_bgcolor"] as? String
         self.author_avatar_url = dict["author_avatar_url"] as? String
         self.cover_image = dict["cover_image"] as? String
-        self.pos = "\(dict["pos"]!)"
-        self.up_times = "\(dict["up_times"]!)"
+        let poss = dict["pos"]
+        self.pos = "\(poss)"
+        let uptimes = dict["up_times"];
+        self.up_times = "\(uptimes)"
         // 图片 
         let photoArray : NSArray = dict["all_images"] as! NSArray
         for photo in photoArray {

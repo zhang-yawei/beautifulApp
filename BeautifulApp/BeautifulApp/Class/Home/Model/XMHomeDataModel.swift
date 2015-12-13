@@ -54,8 +54,8 @@ class XMHomeDataModel: NSObject {
     
     convenience init(dict : NSDictionary) {
         self.init()
-        
-        self.id = "\(dict["id"]!)";
+        id = dict["id"]!as?String
+        self.id = "\(id)";
         self.recommanded_background_color = dict["recommanded_background_color"] as? String
         self.title = dict["title"] as? String
         self.sub_title = dict["sub_title"] as? String

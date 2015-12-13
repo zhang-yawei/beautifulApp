@@ -27,8 +27,8 @@ class XMUpUserDataModel: NSObject {
     
     convenience init(dict : NSDictionary) {
         self.init()
-        
-        self.id = "\(dict["id"])"
+        let idd = dict["id"];
+        self.id = "\(idd)"
         self.userName = dict["userName"] as? String
         self.career = dict["career"] as? String
         self.gender = dict["gender"] as? String
